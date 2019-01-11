@@ -1,0 +1,11 @@
+{
+  "name": "platy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "platy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddy Pytlowany <ed.pytlowany@gmail.com> (https://monk.com.au)",
+  "license": "ISC"
+}
