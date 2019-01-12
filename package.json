@@ -1,6 +1,6 @@
 {
   "name": "platy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple animation library for the terminal",
   "main": "platy.js",
   "scripts": {
@@ -8,5 +8,9 @@
   },
   "author": "Eddy Pytlowany <ed.pytlowany@gmail.com> (https://monk.com.au)",
   "license": "ISC",
-  "keywords": ["animation", "terminal", "cli"]
+  "keywords": [
+    "animation",
+    "terminal",
+    "cli"
+  ]
 }
