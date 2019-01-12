@@ -11,7 +11,6 @@ class Animation extends Base {
 
         this.frames     = [];
         this.pointer    = 0;
-        this.speed      = 1000;
 
         Array.isArray(frames) && frames.forEach( (frame,i) => this.addFrame(frame, i, 1) );
 

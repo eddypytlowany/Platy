@@ -42,6 +42,9 @@ class Stage extends Base {
 
         rl.clearScreenDown(this.readline);
 
+        this.width  = 0;
+        this.height = 0;
+
     }
 
     render(action) {
@@ -107,7 +110,7 @@ class Stage extends Base {
 
             if(this.duration) {
 
-                setTimeout(this.stop.bind(this), this.duration);
+                this.timeoutID = setTimeout(this.stop.bind(this), this.duration);
 
             }
 
@@ -132,9 +135,6 @@ class Stage extends Base {
         this.action && this.action.animation.reset();
 
         this.clear();
-
-        this.width  = 0;
-        this.height = 0;
 
         resolve.call(this, 'stop');
         
