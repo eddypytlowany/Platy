@@ -36,14 +36,20 @@ class Stage extends Base {
 
     }
 
-    clear() {
+    refresh() {
 
         rl.moveCursor(this.readline, -1 * this.width, -1 * this.height);
 
-        rl.clearScreenDown(this.readline);
-
         this.width  = 0;
         this.height = 0;
+
+    }
+
+    clear() {
+
+        this.refresh();
+
+        rl.clearScreenDown(this.readline);
 
     }
 
@@ -60,7 +66,7 @@ class Stage extends Base {
 
         }
 
-        this.clear();
+        this.refresh();
 
         this.width  = frame.width + this.spacer.length + action.say.length;
         this.height = Math.max(frame.height, say.length);
@@ -97,6 +103,8 @@ class Stage extends Base {
             clearTimeout(this.timeoutID);
 
             this.stop();
+
+            this.readline.prompt(false);
 
             this.render(action);
 
